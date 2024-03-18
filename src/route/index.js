@@ -40,7 +40,7 @@ class Product {
     
   }
 
-  static getList = () =>{
+  static getList = () => {
     this.#list;
   }
 
@@ -81,7 +81,7 @@ class Product {
     }
     
   }
-}
+}g
 const product = new Product();
 
 console.log(product.createDate);
