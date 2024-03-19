@@ -1,5 +1,18 @@
 @use '../../lib/service.scss' as s;
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(20);
+}
+
+.title {
+    color: s.color(blue);
+    font-size:  28px;
+    font-weight: 700;
+    padding: s.space(8);
+}
+
 .form {
     display: flex;
     flex-direction:  column;
@@ -38,14 +51,25 @@
         padding: s.space(2);
         border-radius: 20px;
         background-color: s.color("light");
-    }
+
+        &__button__primary {
+                background-color: blue;
+                color: s.color(white);
+            }
+
+}
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    gap: s.space(20);
+
+.form--product {
+    margin: s.space(5);
+    padding: s.space(5);
+    border: 1px solid s.color(light);
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px s.color(light);
 }
+
+
 
 .user-list {
     li {
@@ -55,3 +79,58 @@ main {
     }
 }
 
+//product-list
+
+.product__list {
+    padding: s.space(8);;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: s.space(12);
+    row-gap: s.space(20);
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    padding: s.space(12);
+    gap: s.space(12);
+    max-width: 300px;
+    width: 100%;
+    border: 1px solod s.color(light);
+    border-radius: 20px;
+    box-shadow: 0 0 20px s.color(light); 
+
+    &__name {
+        font-weight: 700;
+        font-size: large;
+    }
+
+    &__price {
+        font-weight: 700;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__id {
+        color: grey;
+    }
+
+    &__link {
+        text-decoration: none;
+        
+        
+    
+    
+} 
+
+.product-card__link:hover {
+    transition: 1s opacity;
+    opacity: 0.5;
+    cursor: pointer;
+}
+}

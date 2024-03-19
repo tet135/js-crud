@@ -6,28 +6,28 @@
 <main>
   <section class="pruduct__create">
     <h1 class="title">Створення товару</h1>
-    <form action="/product-create" method="POST" class="product__info">
+    <form action="/product-create" method="POST" class="form form--product">
       <title class="form__title">
         Інформація про товар
       </title>
+      <div class="form__content">
+        <div class="form__field">
+          <label for="name" class="form__label">Назва товару</label>
+          <input type="name" class="form__input">
+        </div>
 
-      <div class="form__field">
-        <label for="name" class="form__label">Назва товару</label>
-        <input type="name" class="form__input">
+        <div class="form__field">
+          <label for="price" class="form__label">Ціна</label>
+          <input type="price" class="form__input">
+        </div>
+
+        <div class="form__field">
+          <label for="description" class="form__label">Короткий опис товару</label>
+          <input type="description" class="form__input">
+        </div>
+
+        <button class="form__button form__button--">Створити товар</button>
       </div>
-
-      <div class="form__field">
-        <label for="price" class="form__label">Ціна</label>
-        <input type="price" class="form__input">
-      </div>
-
-      <div class="form__field">
-        <label for="description" class="form__label">Короткий опис товару</label>
-        <input type="description" class="form__input">
-      </div>
-
-      <button href="/product-create" class="form__button">Створити товар</button>
-
     </form>
   </section>
 </main>

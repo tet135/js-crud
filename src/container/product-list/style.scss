@@ -1,0 +1,10 @@
+@use '../../lib/service.scss' as s;
+
+.product-card {
+    display: flex;
+    flex-direction: row;
+    max-width: 30%;
+    border: 1px solod s.color(light);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px s.color(light); 
+}
