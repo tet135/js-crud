@@ -8,22 +8,23 @@
   
   <section class="product__list">
     
-    {{#each data}}
+    {{#with data}}
+    
       <form action="/product-list" method="POST" class="form product-card">
-      
-        <h2 class="product-card__name">{{name}}Name</h2>
-        <p class="product-card__description">
+      {{#each products}}
+        <h2 name="name" class="product-card__name">{{name}}Name</h2>
+        <p name="description" class="product-card__description">
           {{description}}desc
         </p>
-        <div class="product-card__id">{{id}}</div>
+        <div name="id" class="product-card__id">{{id}}</div>
         <div class="product-card__bottom">
-          <span class="product-card__price">{{price}} грн</span>
+          <span name="price" class="product-card__price">{{price}} грн</span>
           <a href="/product-edit?id={{id}}" class="product-card__link">Редагувати</a>
         </div>
-
-    
+      {{/each}}   
       </form>
-    {{/each}}
+     
+    {{/with}}
   </section>
 </main>
 
