@@ -200,6 +200,7 @@ class Product {
 
     if (index !== -1) {
       this.#list.splice(index, 1);
+
       return true
     } else {
       return false
@@ -246,7 +247,6 @@ router.get('/product-list', function (req, res) {
     data: {
       products: { 
         list,
-        // isEmpty: list.length === 0,
       },
     }
 
@@ -254,46 +254,28 @@ router.get('/product-list', function (req, res) {
   // ↑↑ сюди вводимо JSON дані
 })
 
-//++++++++++++++++++++
+// ================================================================
+
 router.get('/product-edit', function (req, res) {
   const { id } = req.query
 
   productToEdit = Product.getById(Number(id))
 
-  // let result = true
+  if (productToEdit) {
+    res.render('product-edit', {
+        style: 'product-edit',
+        data: {
+          productToEdit,
+        }
+      })
 
-  // if (!productToEdit) {
-  //   // result = false
-  //   res.render('alert', {
-  //     style: 'alert',
-  //     message: "Дія не виконана",
-  //     info: "Товар з таким ID не знайдено",
-  //   })
-  // } 
-
-  res.render('product-edit', {
-          style: 'product-edit',
-          data: {
-            productToEdit,
-          }
-        })
-
-
-  // if (result) {
-  //   res.render('product-edit', {
-  //       style: 'product-edit',
-  //       data: {
-  //         productToEdit,
-  //       }
-  //     })
-
-  // } else {
-  //   res.render('alert', {
-  //     style: 'alert',
-  //     message: result ? "Успішне виконання дії" : "Дія не виконана",
-       //  info: result ? "Товар знайдено" : "Товар з таким ID не знайдено",
-  //   })
-  // }
+  } else {
+    res.render('alert', {
+      style: 'alert',
+      message: "Дія не виконана",
+        info: "Товар з таким ID не знайдено",
+    })
+  }
 
   // ↑↑ сюди вводимо JSON дані
 })
@@ -303,9 +285,9 @@ router.get('/product-edit', function (req, res) {
 // ↙️ тут вводимо шлях (PATH) до сторінки
 router.post('/product-edit', function (req, res) {
 
-  const { id, data } = req.body
+  const { id, name, price, description } = req.body
   
-  result = Product.updateById(Number(id), { data })
+  result = Product.updateById(id, { name, price, description })
 
   // ↙️ cюди вводимо назву файлу з сontainer
   res.render('alert', {

@@ -22,8 +22,8 @@
           </div>
 
           <div class="form__field">
-            <label for="ID" class="form__label">ID</label>
-            <input type="ID" name="ID" value={{id}} class="form__input">
+            <label for="id" class="form__label">ID</label>
+            <input type="id" name="id" value={{id}} class="form__input">
           </div>
         </div>
 
@@ -36,7 +36,7 @@
 
         <div class="form__section">
           {{!-- /product-list ???--}}
-          <a href="/product-edit" class="form__button form__button--product-edit form__button--primary click">Зберегти оновлення</a>
+          <button href="/product-edit" class="form__button form__button--product-edit form__button--primary click">Зберегти оновлення</button>
           
           <a href="/product-delete?id={{id}}" class="form__button form__button--product-edit form__button--danger click">Видалити товар</a>
         </div>
