@@ -109,4 +109,20 @@ main {
   background-color: red;
 }
 
+.alert-text {
+  padding-top: 8px;
+}
+
+.form--alert {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 130%;
+}
+
 /*# sourceMappingURL=style.css.map */

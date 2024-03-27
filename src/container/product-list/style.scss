@@ -1,0 +1,58 @@
+@use '../../lib/service.scss' as s;
+@forward '../../lib/service.scss';
+
+@use '../index/style.scss';
+@forward '../index/style.scss';
+
+
+.product__list {
+    padding: s.space(4);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: s.space(4);
+    row-gap: s.space(8);
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    padding: s.space(4);
+    gap: s.space(4);
+    flex-basis: 300px;
+    width: 100%;
+    border: 1px solid s.color(light);
+    border-radius: 20px;
+    box-shadow: 0 0 20px s.color(light); 
+
+    &__name {
+        font-weight: 700;
+        font-size: large;
+    }
+
+    &__price {
+        font-weight: bold;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__id {
+        color: s.color(grey);
+    }
+
+    &__link {
+        text-decoration: none;
+        color: s.color(blue);
+    }
+
+    &__link:hover {
+        transition: 1s opacity;
+        opacity: 0.5;
+        cursor: pointer;
+    } 
+}

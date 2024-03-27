@@ -1,0 +1,25 @@
+@use '../../lib/service.scss' as s;
+@forward '../../lib/service.scss';
+
+@use '../product-create/style.scss';
+@forward '../product-create/style.scss';
+
+
+.alert-text {
+    padding-top: s.space(2);
+}
+
+.form--alert {
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;   
+}
+
+.info {
+font-size: 14px;
+font-weight: bold;
+line-height: 130%;
+color: s.color("blue");
+}
+
+    
