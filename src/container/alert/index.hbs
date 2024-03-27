@@ -4,10 +4,14 @@
  }}
 
 <main>
-  <form>
-    <h1 class="form__title">{{info}}</h1>
+  <form class="form form--product form--alert">
+    <div>
+      <div class="form__title form__title--noline">{{message}}</div>
+      <div class="alert-text">{{info}}</div>
+    </div>
+
     {{!-- <p class="form__text">Товар був успішно видалений</p> --}}
-    <a href="/product-list" class="form__button">Повернутися назад</a>
+    <a href="/product-list" class="form__button form__button--primary link">Повернутися назад</a>
   </form>
 </main>
 

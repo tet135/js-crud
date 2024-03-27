@@ -1,61 +1,56 @@
 main {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 80px;
 }
 
 .title {
-  color: blue;
+  color: rgb(11, 104, 235);
   font-size: 28px;
   font-weight: 700;
-  padding: 8px;
+  margin: 32px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  padding: 4px;
-  gap: 8px;
+  padding: 16px;
+  margin: 32px;
+  gap: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 5px #ddd;
 }
 .form__title {
   font-size: 20px;
   font-weight: bold;
-  padding-bottom: 1px;
+  padding-bottom: 4px;
   border-bottom: 1px solid #ddd;
 }
 .form__content {
-  display: grid;
-  gap: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 .form__label {
   font-size: 14px;
 }
 .form__input {
   border: 1px solid #ddd;
-  padding: 2px;
+  padding: 8px;
 }
 .form__field {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 8px;
+  width: 100%;
 }
 .form__button {
   border: 1px solid #ddd;
-  padding: 2px;
-  border-radius: 20px;
-  background-color: #ddd;
-}
-.form__button__button__primary {
-  background-color: blue;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: rgb(11, 104, 235);
   color: white;
-}
-
-.form--product {
-  margin: 5px;
-  padding: 5px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 5px 5px 5px #ddd;
 }
 
 .user-list li {
@@ -64,45 +59,13 @@ main {
   padding-bottom: 5px;
 }
 
-.product__list {
-  padding: 8px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  column-gap: 12px;
-  row-gap: 20px;
+.link {
+  text-decoration: none;
+  background-color: rgb(11, 104, 235);
+  color: white;
 }
 
-.product-card {
-  display: flex;
-  flex-direction: column;
-  padding: 12px;
-  gap: 12px;
-  max-width: 300px;
-  width: 100%;
-  border: 1px solod #ddd;
-  border-radius: 20px;
-  box-shadow: 0 0 20px #ddd;
-}
-.product-card__name {
-  font-weight: 700;
-  font-size: large;
-}
-.product-card__price {
-  font-weight: 700;
-}
-.product-card__bottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.product-card__id {
-  color: grey;
-}
-.product-card__link {
-  text-decoration: none;
-}
-.product-card .product-card__link:hover {
+.link:hover {
   transition: 1s opacity;
   opacity: 0.5;
   cursor: pointer;

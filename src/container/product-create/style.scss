@@ -1,2 +1,51 @@
 @use '../../lib/service.scss' as s;
+@forward '../../lib/service.scss';
 
+@use '../index/style.scss';
+@forward '../index/style.scss';
+
+.form__title--noline {
+    border-bottom: none;
+}
+
+.form__section {
+    display: flex;
+    flex-direction: row;
+    gap: s.space(6);
+    justify-content: space-between;
+}
+
+.form__input--big {
+    height: s.space(20);
+    text-wrap: wrap;
+    text-align: justify;
+    text-overflow: ellipsis;
+}
+
+.form__note {
+    color: s.color("light");
+}
+
+
+
+.form__button--product-edit {
+    border-radius: 4px;
+    text-align: center;
+    color: wheat;
+    width: 100%;
+    text-decoration: none;
+ }
+
+.form__button--primary {
+    background-color: s.color(blue);
+ }
+
+.form__button--danger {
+    background-color: s.color(red);
+
+}
+
+
+.form--product {
+
+}
