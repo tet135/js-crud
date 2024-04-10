@@ -1,42 +1,56 @@
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.title {
+  color: rgb(11, 104, 235);
+  font-size: 28px;
+  font-weight: 700;
+  margin: 32px;
+}
+
 .form {
   display: flex;
   flex-direction: column;
-  padding: 4px;
-  gap: 8px;
+  padding: 16px;
+  margin: 32px;
+  gap: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 5px #ddd;
 }
 .form__title {
   font-size: 20px;
   font-weight: bold;
-  padding-bottom: 1px;
+  padding-bottom: 4px;
   border-bottom: 1px solid #ddd;
 }
 .form__content {
-  display: grid;
-  gap: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 .form__label {
   font-size: 14px;
 }
 .form__input {
   border: 1px solid #ddd;
-  padding: 2px;
+  padding: 8px;
 }
 .form__field {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 8px;
+  width: 100%;
 }
 .form__button {
   border: 1px solid #ddd;
-  padding: 2px;
-  border-radius: 20px;
-  background-color: #ddd;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: rgb(11, 104, 235);
+  color: white;
 }
 
 .user-list li {
@@ -45,5 +59,16 @@ main {
   padding-bottom: 5px;
 }
 
+.link {
+  text-decoration: none;
+  background-color: rgb(11, 104, 235);
+  color: white;
+}
+
+.link:hover {
+  transition: 1s opacity;
+  opacity: 0.5;
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -6,28 +6,32 @@
 <main>
   <section class="pruduct__create">
     <h1 class="title">Створення товару</h1>
-    <form action="/product-create" method="POST" class="product__info">
-      <title class="form__title">
+    <form action="/product-create" method="POST" class="form form--product">
+      <div class="form__title form__title--noline">
         Інформація про товар
-      </title>
+      </div >
+      <div class="form__content">
+        <div class="form__section">
+          <div class="form__field">
+            <label for="name" class="form__label">Назва товару</label>
+            <input type="name" name="name" class="form__input">
+          </div>
 
-      <div class="form__field">
-        <label for="name" class="form__label">Назва товару</label>
-        <input type="name" class="form__input">
+          <div class="form__field">
+            <label for="price" class="form__label">Ціна</label>
+            <input type="price" name="price" class="form__input">
+          </div>
+        </div>
+
+
+        <div class="form__field">
+          <label for="description" class="form__label">Короткий опис товару</label>
+          <input type="description" name="description" class="form__input form__input--big">
+          <span class="form__note"> Відображується у картці товару</span>        
+        </div>
+
+        <button class="form__button form__button--primary link">Створити товар</button>
       </div>
-
-      <div class="form__field">
-        <label for="price" class="form__label">Ціна</label>
-        <input type="price" class="form__input">
-      </div>
-
-      <div class="form__field">
-        <label for="description" class="form__label">Короткий опис товару</label>
-        <input type="description" class="form__input">
-      </div>
-
-      <button href="/product-create" class="form__button">Створити товар</button>
-
     </form>
   </section>
 </main>

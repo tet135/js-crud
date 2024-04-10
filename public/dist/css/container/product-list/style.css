@@ -71,42 +71,50 @@ main {
   cursor: pointer;
 }
 
-.form__title--noline {
-  border-bottom: none;
-}
-
-.form__section {
+.product__list {
+  padding: 16px;
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  column-gap: 16px;
+  row-gap: 32px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 16px;
+  flex-basis: 300px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ddd;
+}
+.product-card__name {
+  font-weight: 700;
+  font-size: large;
+}
+.product-card__price {
+  font-weight: bold;
+}
+.product-card__bottom {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
-
-.form__input--big {
-  height: 80px;
-  text-wrap: wrap;
-  text-align: justify;
-  text-overflow: ellipsis;
+.product-card__id {
+  color: grey;
 }
-
-.form__note {
-  color: #ddd;
-}
-
-.form__button--product-edit {
-  border-radius: 4px;
-  text-align: center;
-  color: wheat;
-  width: 100%;
+.product-card__link {
   text-decoration: none;
+  color: rgb(11, 104, 235);
 }
-
-.form__button--primary {
-  background-color: rgb(11, 104, 235);
-}
-
-.form__button--danger {
-  background-color: red;
+.product-card__link:hover {
+  transition: 1s opacity;
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

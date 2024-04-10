@@ -1,20 +1,40 @@
 @use '../../lib/service.scss' as s;
+@forward '../../lib/service.scss';
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(20);
+}
+
+.title {
+    color: s.color(blue);
+    font-size:  28px;
+    font-weight: 700;
+    margin: s.space(8);
+}
 
 .form {
     display: flex;
     flex-direction:  column;
     padding: s.space(4);
-    gap: s.space(8);
+    margin: s.space(8);
+    gap: s.space(4);
+    
+    border: 1px solid s.color(light);
+    border-radius: 8px;
+    box-shadow: 0 0 10px 5px s.color(light);
 
     &__title {
         font-size: 20px;
         font-weight: bold;
         padding-bottom: s.space(1);
-        border-bottom: 1px solid s.color("light");
+        border-bottom: 1px solid s.color(light);
     }
 
     &__content {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: s.space(6);
     }
 
@@ -23,28 +43,24 @@
     }
 
     &__input {
-        border: 1px solid s.color("light");
+        border: 1px solid s.color(light);
         padding: s.space(2);
     }
 
     &__field {
       display: flex;
       flex-direction: column;
-      gap: s.space(2);  
+      gap: s.space(2);
+      width: 100%;  
     }
 
     &__button {
-        border: 1px solid s.color("light");
+        border: 1px solid s.color(light);
         padding: s.space(2);
-        border-radius: 20px;
-        background-color: s.color("light");
-    }
+        border-radius: 4px;
+        background-color: s.color(blue);
+        color: s.color(white);          
 }
-
-main {
-    display: flex;
-    flex-direction: column;
-    gap: s.space(20);
 }
 
 .user-list {
@@ -55,3 +71,14 @@ main {
     }
 }
 
+.link {
+    text-decoration: none;
+    background-color: s.color(blue);
+    color: s.color(white);
+}
+
+.link:hover {
+    transition: 1s opacity;
+    opacity: 0.5;
+    cursor: pointer;
+} 
