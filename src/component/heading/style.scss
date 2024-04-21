@@ -1,0 +1,16 @@
+.heading {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.heading__title {
+    font-size: 40px;
+    font-weight: 500;
+    color: #0050FF;
+}
+
+.heading__info {
+    font-size: 16px;
+    color: #000;
+}

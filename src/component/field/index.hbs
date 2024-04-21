@@ -1,0 +1,5 @@
+<div class="field {{#if disabled}} field--disabled {{/if}}">
+    <label  for="{{name}}" class="field__label {{#if grey}}field__label--grey{{/if}}">{{label}}</label>
+    {{!-- за замовчуванням input type="submit" --}}
+    <input type="{{#if type}}{{type}}{{/if}}" value="{{#if value}}{{value}}{{/if}}" name="{{name}}" class="field__input {{#if noBorder}} field__input--noBorder{{/if}}" {{#if readonly}}readonly{{/if}} >
+</div>
