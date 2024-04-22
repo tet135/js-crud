@@ -1,0 +1,17 @@
+.button {
+  width: 100%;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: rgb(11, 104, 235);
+  color: white;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.button:hover {
+  opacity: 0.7;
+}
+
+/*# sourceMappingURL=style.css.map */

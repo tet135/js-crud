@@ -1,0 +1,19 @@
+@use '../../lib/service.scss' as s;
+@forward '../../lib/service.scss';
+
+.button {
+    width: 100%;
+    border: none;
+    padding: s.space(2);
+    border-radius: 5px;
+    background-color: s.color(blue);
+    color: s.color(white);
+    padding: s.space(2) s.space(4);
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}

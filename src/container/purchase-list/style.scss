@@ -1,0 +1,54 @@
+@use '../../lib/service.scss' as s;
+@forward '../../lib/service.scss';
+
+
+@use '../../component/heading/style.scss' as heading;
+@use '../../component/purchase-product/style.scss' as purchaseProduct;
+@use '../../component/field/style.scss' as field;
+@use '../../component/divider/style.scss' as divider;
+@use '../../component/button/style.scss' as button;
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(20);
+    padding: s.space(20);
+}
+.list {
+    display: flex;
+    flex-direction: column;
+}
+.list_link {
+ text-decoration: none;
+ cursor: pointer;
+}
+
+.list__item {
+    padding: s.space(5);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: s.space(5);
+    align-items: start;
+    align-items: center;
+    font-size: 16px;
+    
+    
+}
+
+.list__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: s.color(grey);
+    gap: s.space(5);
+
+}
+
+.list__label {
+    color: s.color(grey);
+}
+
+.list__value {
+    color: s.color(black);
+}

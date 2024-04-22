@@ -1,0 +1,34 @@
+@use '../../lib/service.scss' as s;
+@forward '../../lib/service.scss';
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(1);
+    width: 100%;
+}
+
+.field--disabled {
+    position: absolute;
+    display: none;
+}
+
+.field__label {
+    font-size: 14px;
+}
+
+.field__label--grey {
+    font-size: 14px;
+    color: s.color(grey);
+}
+
+.field__input {
+    border: 1px solid s.color(light);
+    padding: s.space(2);
+    border-radius: 5px;
+}
+
+.field__input--noBorder {
+    border: none;
+    padding-left: 0;
+}
