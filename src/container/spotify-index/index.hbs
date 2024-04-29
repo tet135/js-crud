@@ -5,32 +5,34 @@
 
 
 <main class="main">
-  {{#with data}}
   <div class="main__content">
-    <h1 class="title title--center">Пошук плейліста</h1>
+    <div class="header">
+      <h1 class="title title--center">Моя бібліотека</h1>
+      <div class="links">
+        <a href="/spotify-search" class="link">
+          <img src="../../img/svg/spotify-search.svg" alt="search_playlist">
+        </a>
+        <a href="/spotify-choose" class="link">
+          <img src="../../img/svg/add_cross.svg" alt="add_playlist">
+        </a>
+      </div>
+    </div>
 
-    <form method="POST" action="/spotify-search" class="search">
-      <img src="../../img/svg/spotify-search.svg" alt="search">
-      <input type="search" class="search__input" placeholder="Введіть запит" name="value" value="{{value}}">
-      <button class="search__button">Пошук</button>
-    </form>
-
+    {{#with data}}
     <ul class="playlist__list">
       {{#each list}}
       <li class="playlist">
-        <img src="{{image}}" alt="{{name}}" width="100px" height="100px">
+        <img src="{{image}}" alt="{{name}}">
         <div class="playlist__content">
           <strong class="playlist__name">{{name}}</strong>
-          <span class="playlist__amount">Кількість пісень: {{amount}}</span>
+          <span class="playlist__amount">{{amount}} пісень</span>
         </div>
       </li>
       {{/each}}
     </ul>
+    {{/with}}
   </div>
-  {{/with}}
 </main>
-
-
 
 {{! 
     Цей код містить лише те, що буде виводитись в <body>

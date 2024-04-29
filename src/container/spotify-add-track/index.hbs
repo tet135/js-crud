@@ -9,20 +9,26 @@
   <div class="main__content">
     <h1 class="title title--center">Додати до плейліста {{name}}</h1>
 
-    <ul class="track__list">
-      {{#each tracks}}
-      <li class="track">
-        <img width="92px" height="92px" src="{{image}}" alt="{{name}}">
-        <div class="track__content">
-          <strong class="track__name">{{name}}</strong>
-          <em class="track__author">{{author}}</em>
-        </div>
-        <a href="/spotify-playlist?playlistId={{../playlistId}}&trackId={{id}}">
-          <img src="../../img/svg/add-round-button.svg" alt="add-track">
-        </a>
-      </li>
-      {{/each}}
-    </ul>
+    {{#each tracks}}
+    <form method="POST" action="/spotify-add-track?playlistId={{../playlistId}}&trackId={{id}}"  class="form">
+      <ul class="track__list">
+        {{!-- /////////////!!!!!!!!!!!!!!!!!!!!!!!! --}}
+        <input type="hidden" name="playlistId" value="{{../playlistId}}">
+        <input type="hidden" name="trackId" value="{{id}}">
+
+        <li class="track">
+          <img width="92px" height="92px" src="{{image}}" alt="{{name}}">
+          <div class="track__content">
+            <strong class="track__name">{{name}}</strong>
+            <em class="track__author">{{author}}</em>
+          </div>
+          <button type="submit" class="form__button">
+            <img src="../../img/svg/add-round-button.svg" alt="add-track">
+          </button>
+        </li>
+      </ul>
+    </form>
+    {{/each}}
   </div>
   {{/with}}
 </main>

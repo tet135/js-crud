@@ -131,9 +131,43 @@ class Playlist {
     const track = Track.getById(id)
     playlist.tracks.push(track)
   }
-}
-//================================================================
 
+  static findListByValue(name) {
+    return this.#list.filter((playlist) =>
+      playlist.name
+        .toLowerCase()
+        .includes(name.toLowerCase()),
+    )
+  }
+}
+
+Playlist.makeMix(Playlist.create('Test'))
+Playlist.makeMix(Playlist.create('Test2'))
+Playlist.makeMix(Playlist.create('Test3'))
+//================================================================
+// router.get Створює нам один ентпоїнт
+
+// ↙️ тут вводимо шлях (PATH) до сторінки
+router.get('/', function (req, res) {
+  // res.render генерує нам HTML сторінку
+  // ↙️ cюди вводимо назву файлу з сontainer
+
+  const list = Playlist.getList()
+
+  res.render('spotify-index', {
+    // вказуємо назву папки контейнера, в якій знаходяться наші стилі
+    style: 'spotify-index',
+
+    data: {
+      list: list.map(({ tracks, ...rest }) => ({
+        ...rest,
+        amount: tracks.length,
+      })),
+    },
+  })
+  // ↑↑ сюди вводимо JSON дані
+})
+// ===============================================//
 // router.get Створює нам один ентпоїнт
 
 // ↙️ тут вводимо шлях (PATH) до сторінки
@@ -199,7 +233,7 @@ router.post('/spotify-create', function (req, res) {
     data: {
       message: 'Успішно',
       info: 'Плейліст створений',
-      link: `/spotify-playlist?playlistId=${playlist.id}`, ////////////////////
+      link: `/spotify-playlist?playlistId=${playlist.id}`, ////////////////////!!!!!!!!!!
     },
   })
 
@@ -219,7 +253,6 @@ router.post('/spotify-create', function (req, res) {
 
 router.get('/spotify-playlist', function (req, res) {
   const id = Number(req.query.playlistId) //////////////////////////////
-  const trackId = Number(req.query.trackId) ////////////////////////////////////////
 
   const playlist = Playlist.getById(id)
 
@@ -289,8 +322,7 @@ router.get('/spotify-delete-track', function (req, res) {
 // ===============================================//
 
 router.get('/spotify-add-track', function (req, res) {
-  const playlistId = Number(req.query.playlistId) //ok
-
+  const playlistId = Number(req.query.playlistId)
   const playlist = Playlist.getById(playlistId)
 
   if (!playlist) {
@@ -322,11 +354,10 @@ router.post('/spotify-add-track', function (req, res) {
   const trackId = Number(req.body.trackId)
 
   let playlist = Playlist.getById(playlistId)
-
   const track = Track.getById(trackId)
 
-  console.log(playlist)
-  console.log(track)
+  // console.log(playlist)
+  // console.log(track)
 
   if (!playlist) {
     return res.render('alert', {
@@ -340,9 +371,9 @@ router.post('/spotify-add-track', function (req, res) {
     })
   }
 
-  Playlist.addTrack(playlist, trackId)
+  playlist.addTrack(playlist, trackId)
 
-  console.log(playlist.tracks)
+  // console.log(playlist.tracks)
 
   res.render('spotify-playlist', {
     style: 'spotify-playlist',
@@ -356,6 +387,44 @@ router.post('/spotify-add-track', function (req, res) {
   })
 })
 
+// ================//
+
+router.get('/spotify-search', function (req, res) {
+  const value = ''
+  // value - це назва плейліста, що вводить користувач для пошуку
+  const list = Playlist.findListByValue(value)
+
+  res.render('spotify-search', {
+    style: 'spotify-search',
+
+    data: {
+      value,
+      list: list.map(({ tracks, ...rest }) => ({
+        ...rest,
+        amount: tracks.length,
+      })),
+    },
+  })
+})
+
+// =====================//
+router.post('/spotify-search', function (req, res) {
+  const value = req.body.value || ''
+
+  const list = Playlist.findListByValue(value)
+
+  res.render('spotify-search', {
+    style: 'spotify-search',
+
+    data: {
+      value,
+      list: list.map(({ tracks, ...rest }) => ({
+        ...rest,
+        amount: tracks.length,
+      })),
+    },
+  })
+})
 // ===============================================//
 // Підключаємо роутер до бек-енду
 module.exports = router
