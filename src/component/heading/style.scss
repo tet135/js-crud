@@ -1,7 +1,11 @@
+@use '../../lib/space.scss' as s;
+@forward '../../lib/space.scss';
+
 .heading {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    // margin: s.space(8);
 }
 
 .heading__title {

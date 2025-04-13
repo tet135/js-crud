@@ -214,7 +214,7 @@ Promocode.add('SALE25', 0.75)
 // router.get Створює нам один ентпоїнт
 
 // ↙️ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
+router.get('/purchase', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   // ↙️ cюди вводимо назву файлу з сontainer
@@ -391,7 +391,7 @@ router.post('/purchase-submit', function (req, res) {
       data: {
         message: 'Заповніть обов`язкові поля',
         info: 'Некоректні дані',
-        link: '/purchase-list',
+        link: `javascript:window.history.back()`, //я правила 10.04.2025
       },
     })
   }
@@ -468,7 +468,7 @@ router.get('/purchase-list', function (req, res) {
 
   const id = Number(req.query.id)
 
-  console.log('!!!!!!!!!!!!!!!!', Purchase.getList())
+  // console.log('!!!!!!!!!!!!!!!!', Purchase.getList())
 
   // res.render генерує нам HTML сторінку
 

@@ -1,12 +1,14 @@
 @use '../../lib/service.scss' as s;
 @forward '../../lib/service.scss';
 
-@use '../index/style.scss';
-@forward '../index/style.scss';
+@use '../user/style.scss';
+@forward '../user/style.scss';
 
+@use '../../component/nav/style.scss' as nav;
+@use '../../component/heading/style.scss' as heading;
 
 .product__list {
-    padding: s.space(4);
+    // padding: s.space(4);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

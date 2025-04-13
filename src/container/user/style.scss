@@ -1,24 +1,30 @@
 @use '../../lib/service.scss' as s;
 @forward '../../lib/service.scss';
 
+
+@use '../../component/nav/style.scss' as nav;
+
 main {
     display: flex;
     flex-direction: column;
-    gap: s.space(20);
-}
-
-.title {
-    color: s.color(blue);
-    font-size:  28px;
-    font-weight: 700;
+    gap: s.space(10);
     margin: s.space(8);
 }
+
+
+
+// .title {
+//     color: s.color(blue);
+//     font-size:  28px;
+//     font-weight: 700;
+//     margin: s.space(8);
+// }
 
 .form {
     display: flex;
     flex-direction:  column;
     padding: s.space(4);
-    margin: s.space(8);
+    margin-top: s.space(8);
     gap: s.space(4);
     
     border: 1px solid s.color(light);
@@ -68,17 +74,17 @@ main {
         padding-right: 15px;
         padding-top: 5px;
         padding-bottom: 5px;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        align-items: center;
     }
 }
 
 .link {
-    text-decoration: none;
-    background-color: s.color(blue);
-    color: s.color(white);
+    display: inline;
+    padding: s.space(2);
+    margin: s.space(0);
+    margin-left: s.space(2);
+    // color: s.color(blue)
 }
-
-.link:hover {
-    transition: 1s opacity;
-    opacity: 0.5;
-    cursor: pointer;
-} 

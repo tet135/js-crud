@@ -7,8 +7,11 @@ a:hover {
   opacity: 0.6;
 }
 
-.main {
+body {
   background-color: #121212;
+}
+
+.main {
   height: 100%;
   color: white;
   display: flex;
@@ -77,6 +80,34 @@ a:hover {
 .playlist__amount {
   font-size: 16px;
   color: #ddd;
+}
+
+.home__img {
+  display: inline;
+  width: 20px;
+  height: 20px;
+}
+
+.home__link {
+  text-decoration: none;
+  color: rgb(11, 104, 235);
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  margin: 32px;
+  gap: 16px;
+  width: fit-content;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 5px #ddd;
+}
+
+.home__link:hover {
+  transition: 1s opacity;
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 .add-button {

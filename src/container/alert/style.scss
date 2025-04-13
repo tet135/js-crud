@@ -4,9 +4,13 @@
 @use '../product-create/style.scss';
 @forward '../product-create/style.scss';
 
+@use '../../component/nav/style.scss' as nav;
 
-.alert-text {
-    padding-top: s.space(2);
+main {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(4);
+    margin: s.space(8);
 }
 
 .form--alert {
@@ -15,11 +19,9 @@
     align-items: center;   
 }
 
-.info {
-font-size: 14px;
-font-weight: bold;
-line-height: 130%;
-color: s.color("blue");
+.alert__text {
+    padding-top: s.space(2);
 }
+
 
     

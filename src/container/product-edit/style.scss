@@ -1,2 +1,5 @@
 @use '../product-create/style.scss' as index;
-@forward '../product-create/style.scss'
+@forward '../product-create/style.scss';
+
+@use '../../component/nav/style.scss' as nav;
+@use '../../component/heading/style.scss' as heading;

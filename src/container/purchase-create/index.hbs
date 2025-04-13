@@ -1,8 +1,8 @@
-{{! 
-Це код container файлу для index сторінки, 
+{{!
+Це код container файлу для index сторінки,
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
- }}
-
+}}
+{{>nav}}
 <main class="main">
   {{#with data}}
   <form method="POST" action="/purchase-submit?id={{id}}" class="form-card">
@@ -23,10 +23,10 @@
     {{>heading title="Оформлення замовлення"}}
 
     <div class="form-card__section">
-        {{>field label="Прізвище" name="lastname"}}
-        {{>field label="Ім'я" name="firstname"}}
-        {{>field label="Мобільний телефон" name="phone"}}
-        {{>field label="Електронна пошта" name="email"}}
+      {{>field label="Прізвище" name="lastname"}}
+      {{>field label="Ім'я" name="firstname"}}
+      {{>field label="Мобільний телефон" name="phone"}}
+      {{>field label="Електронна пошта" name="email"}}
     </div>
 
     {{>field label="Коментар" name="comment"}}
@@ -55,7 +55,9 @@
 </main>
 
 
-{{! 
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
-}}
+{{!
+Цей код містить лише те, що буде виводитись в
+
+<body>
+  Адже наш layout/default.hbs має вже структуру HTML
+  }}
