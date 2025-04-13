@@ -1,0 +1,32 @@
+@use '../../lib/service.scss' as s;
+@forward '../../lib/service.scss';
+
+.home__img {
+    display: inline;
+    width: 20px;
+    height: 20px;
+}
+
+.home__link {
+    text-decoration: none;
+    color: s.color(blue);
+    font-size: 20px;
+
+    display: flex;
+    flex-direction:  row;
+    align-items: center;
+    padding: s.space(4);
+    margin: s.space(8);
+    gap: s.space(4);
+    width: fit-content;
+    border: 1px solid s.color(light);
+    border-radius: 8px;
+    box-shadow: 0 0 10px 5px s.color(light);
+
+}
+
+.home__link:hover {
+    transition: 1s opacity;
+    opacity: 0.5;
+    cursor: pointer;
+} 

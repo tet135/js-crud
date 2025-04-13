@@ -1,7 +1,7 @@
 @use '../../lib/service.scss' as s;
 @forward '../../lib/service.scss';
 
-
+@use '../../component/nav/style.scss' as nav;
 @use '../../component/heading/style.scss' as heading;
 @use '../../component/purchase-product/style.scss' as purchaseProduct;
 @use '../../component/field/style.scss' as field;
@@ -11,8 +11,8 @@
 main {
     display: flex;
     flex-direction: column;
-    gap: s.space(20);
-    padding: s.space(20);
+    gap: s.space(10);
+    margin: s.space(8);
 }
 
 .product-list {

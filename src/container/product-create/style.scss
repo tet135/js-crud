@@ -1,8 +1,23 @@
 @use '../../lib/service.scss' as s;
 @forward '../../lib/service.scss';
 
-@use '../index/style.scss';
-@forward '../index/style.scss';
+@use '../user/style.scss';
+@forward '../user/style.scss';
+
+@use '../../component/nav/style.scss' as nav;
+@use '../../component/heading/style.scss' as heading;
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(10);
+    margin: s.space(8);
+}
+
+// .pruduct__create {
+//     padding-left: s.space(8);
+// }
 
 .form__title--noline {
     border-bottom: none;
@@ -26,8 +41,6 @@
     color: s.color(light);
 }
 
-
-
 .form__button--product-edit {
     border-radius: 4px;
     text-align: center;
@@ -42,10 +55,5 @@
 
 .form__button--danger {
     background-color: s.color(red);
-
-}
-
-
-.form--product {
 
 }

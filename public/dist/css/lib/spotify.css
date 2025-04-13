@@ -7,8 +7,11 @@ a:hover {
   opacity: 0.6;
 }
 
-.main {
+body {
   background-color: #121212;
+}
+
+.main {
   height: 100%;
   color: white;
   display: flex;

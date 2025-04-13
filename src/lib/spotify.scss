@@ -9,9 +9,10 @@ a {
         opacity: 0.6;
     }
 }
-
+body {
+    background-color: s.color(dark); 
+}
 .main {
-    background-color: s.color(dark);
     height: 100%;
     color: s.color(white);
     display: flex;

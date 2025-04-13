@@ -1,6 +1,7 @@
 @use '../../lib/service.scss' as s;
-
 @use '../../lib/spotify.scss' as spotify;
+
+@use '../../component/nav/style.scss' as nav;
 
 .search {
     background-color: s.color(dark-grey);

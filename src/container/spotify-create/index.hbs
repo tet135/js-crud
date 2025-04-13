@@ -1,15 +1,15 @@
-{{! 
-Це код container файлу для index сторінки, 
+{{!
+Це код container файлу для index сторінки,
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
- }}
+}}
 
-
+{{>nav}}
 <main class="main">
   <div class="main__content">
     <header class="header">
       <a href="/">
-      {{!-- //NB! перевіряти розміри картинок (см в середину .svg файлу). Для .png файлів в тег  <img вписати атрибути width="" and height="" --}}
-      <img src="/img/svg/cross_back.svg" alt="cross_back">
+        {{!-- //NB! перевіряти розміри картинок (см в середину .svg файлу). Для .png файлів в тег <img вписати атрибути
+          width="" and height="" --}} <img src="/img/svg/cross_back.svg" alt="cross_back">
       </a>
     </header>
     <h1 class="title title--center title--small">Назвіть плейліст</h1>
@@ -22,7 +22,9 @@
 
 
 
-{{! 
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
-}}
+{{!
+Цей код містить лише те, що буде виводитись в
+
+<body>
+  Адже наш layout/default.hbs має вже структуру HTML
+  }}

@@ -1,6 +1,8 @@
 @use '../../lib/service.scss' as s;
 @use '../../lib/spotify.scss' as spotify;
 
+@use '../../component/nav/style.scss' as nav;
+
 .choose {
     display: grid;
     gap: s.space(8);
